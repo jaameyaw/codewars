@@ -32,6 +32,7 @@ function twoSum (numbers, target) {
 }
 console.log (twoSum([1, 2, 3], 4)); // returns [0, 2] or [2, 0]
 
+
 /* Problem 2:
 Write a function that takes a postive integer n as input and prints a pyramid pattern of asterisks (*) with n rows 
 
@@ -42,3 +43,19 @@ For example, if n = 5, the output should be:
  *******
 *********
 */
+
+function printPyramid (n) {
+    let ast;
+    for (let i = 0; i < n; i++) {
+        let space = ""
+        for (j = i + 1; j<n; j++) {
+            ast = "*";
+            space +=ast 
+            
+        }
+    }
+
+    console.log (ast)
+}
+
+console.log (printPyramid(5))
