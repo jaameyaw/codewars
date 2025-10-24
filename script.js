@@ -12,7 +12,6 @@ For the purposes of this kata, some tests may have multiple answers; any valid s
 The input will always be valid (numbers will be an array of length 2 or greater, and all of the items will be numbers; target will always be the sum of two different items from that array).
 
 twoSum([1, 2, 3], 4)  returns [0, 2] or [2, 0]
-twoSum([3, 2, 4], 6) returns [1, 2] or [2, 1
 */
 // Solution:
 function twoSum (numbers, target) {
@@ -32,3 +31,14 @@ function twoSum (numbers, target) {
     return n;
 }
 console.log (twoSum([1, 2, 3], 4)); // returns [0, 2] or [2, 0]
+
+/* Problem 2:
+Write a function that takes a postive integer n as input and prints a pyramid pattern of asterisks (*) with n rows 
+
+For example, if n = 5, the output should be:
+    *
+   ***
+  *****  
+ *******
+*********
+*/
