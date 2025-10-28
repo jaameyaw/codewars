@@ -44,7 +44,7 @@ For example, if n = 5, the output should be:
 *********
 */
 
-
+// Solution
 function printPyramid(n) {
     for (let i = 1; i <= n; i++ ) {
         let row = "";
