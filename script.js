@@ -76,3 +76,19 @@ Additionally, if the number is negative, return 0.
 Note: If a number is a multiple of both 3 and 5, only count it once.
 */
 
+// first try
+/* let num = 0;
+for (let i = 1; i<=3; i++) {
+    num ++;
+    multiples = 3*num;
+    console.log(multiples)
+}
+
+let numInitial = 0
+
+for (let j =1; j<=10; j++) {
+    numInitial ++
+    multiplesofFive = 5*numInitial;
+
+    console.log(multiplesofFive)   
+} */
