@@ -109,6 +109,8 @@ function solution(number) {
 }
 
 console.log (solution(20))
+
+
 /*random question from udemy js course
 
 Password validation...
@@ -117,3 +119,11 @@ Password validation...
 3. Cannot contain space
 
 Return true if all requirement is met otherwise false.*/
+
+// solution
+function isPasswordValid (password, username) {
+    const charReg = /^.{7,}$/;
+    return charReg.test(password) && !(password.includes(" ")) &&  !(password.includes(username))
+}
+
+console.log(isPasswordValid('89Fjj1nms', 'Owusu'))
