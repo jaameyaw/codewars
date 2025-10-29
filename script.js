@@ -109,3 +109,11 @@ function solution(number) {
 }
 
 console.log (solution(20))
+/*random question from udemy js course
+
+Password validation...
+1. At least 7 characters
+2. Cannot contain username
+3. Cannot contain space
+
+Return true if all requirement is met otherwise false.*/
