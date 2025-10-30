@@ -139,3 +139,13 @@ For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g o
 */
 
 
+
+function makeCake (recipe, available) {
+    const keyRecipe = Object.keys(recipe)
+    const keyIng = Object.keys(available)
+
+    return keyIng === keyRecipe
+}
+
+makeCake ({ flour: 500, sugar: 200}, {flour: 2000, sugar: 700, eggs: 2})
+
