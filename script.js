@@ -142,10 +142,18 @@ Ingredients that are not present in the objects, can be considered as 0.
 
 
 function makeCake (recipe, available) {
-    const keyRecipe = Object.keys(recipe)
-    const keyIng = Object.keys(available)
 
-    return keyIng === keyRecipe
+    let cakes = Infinity;
+
+    for (let ingredients in recipe) {
+        if (!available[ingredients]) return 0;  //Ingredients that are not present in the objects 
+
+        const possible = Math.floor(available[ingredients] / recipe[ingredients])
+        cakes = Math.min(cakes, possible)
+    }
+
+    console.log(cakes) 
+
 }
 
 makeCake ({ flour: 500, sugar: 200}, {flour: 2000, sugar: 700, eggs: 2})
