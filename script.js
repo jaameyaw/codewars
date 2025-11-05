@@ -178,3 +178,21 @@ foo099 -> foo100
 
 Attention: If the number has leading zeros the amount of digits should be considered.
 */
+
+function checkNumber (string) {
+    let numReg = /\d/
+
+    for (i=0; i<string.length; i++) {
+        if (numReg.test(string[i])){
+            let sliced = string.slice(i, string.length)
+            let num = Number(sliced)
+            num += 1
+            return string.replace (sliced, num)
+        } else {
+
+        }
+    }
+
+}
+
+console.log(checkNumber("hey0042"))
