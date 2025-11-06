@@ -179,20 +179,26 @@ foo099 -> foo100
 Attention: If the number has leading zeros the amount of digits should be considered.
 */
 
-function checkNumber (string) {
-    let numReg = /\d/
+function checkNumber (strng) {
+    let i = strng.length - 1;
 
-    for (i=0; i<string.length; i++) {
-        if (numReg.test(string[i])){
-            let sliced = string.slice(i, string.length)
-            let num = Number(sliced)
-            num += 1
-            return string.replace (sliced, num)
-        } else {
-
-        }
+    // move left until we hit a non-digit character
+    while (i >= 0 && /\d/.test(strng[i])) {
+        i--;
     }
 
+    // split into text and number parts
+    const slicedText = strng.slice(0, i + 1);
+    const slicedNum = strng.slice(i + 1);
+
+    // if no number, just append 1
+    if (slicedNum === "") return slicedText + "1";
+
+    // increment while preserving leading zeros
+    const num = (Number(slicedNum) + 1).toString().padStart(slicedNum.length, "0");
+
+    return slicedText + num;
 }
 
-console.log(checkNumber("hey0042"))
+
+console.log(checkNumber("foo99"))
