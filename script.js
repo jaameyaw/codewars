@@ -183,5 +183,5 @@ Attention: If the number has leading zeros the amount of digits should be consid
 
 let incrementString = str => str.replace(/([0-8]|\d?9+)?$/, (e) => e ? + e + 1 : 1)
 
-
+// read on regular expressions
 console.log(incrementString("foo0001"))
