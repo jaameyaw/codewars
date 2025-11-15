@@ -185,3 +185,11 @@ let incrementString = str => str.replace(/([0-8]|\d?9+)?$/, (e) => e ? + e + 1 :
 
 // read on regular expressions
 console.log(incrementString("foo0001"))
+/* Problem 6:
+
+Given a number n, for each integer i in the range from 1 to n inclusive, print per line as follows:
+
+>if i is a multiple of both 5 & 3, print FizzBuzz
+>if i is a multiple of only 3 but not 5, print Fizz
+>if i is a multiple of only 5 but not 3, print Buzz
+>Neither 3 or 5 print the value of i*/
