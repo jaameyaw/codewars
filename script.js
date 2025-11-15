@@ -185,6 +185,9 @@ let incrementString = str => str.replace(/([0-8]|\d?9+)?$/, (e) => e ? + e + 1 :
 
 // read on regular expressions
 console.log(incrementString("foo0001"))
+
+
+
 /* Problem 6:
 
 Given a number n, for each integer i in the range from 1 to n inclusive, print per line as follows:
@@ -193,3 +196,20 @@ Given a number n, for each integer i in the range from 1 to n inclusive, print p
 >if i is a multiple of only 3 but not 5, print Fizz
 >if i is a multiple of only 5 but not 3, print Buzz
 >Neither 3 or 5 print the value of i*/
+
+// solution
+function fizzBuzz (n) {
+    for (let i=1; i<=n; i++) {
+        if (i % 3 === 0 & i % 5 === 0) {
+            console.log ( `FizzBuzz`)
+        } else if (i % 3 === 0 & i % 5 !== 0) {
+            console.log ( `Fizz`)
+        } else if (i % 5 === 0 & i % 3 !== 0) {
+            console.log ( `Buzz`)
+        } else {
+            console.log (i)
+        }
+    }
+}
+
+fizzBuzz(6)
